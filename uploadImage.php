@@ -132,19 +132,21 @@ session_start();
                     $response = json_decode(curl_exec($ch));
                     curl_close($ch);
                     
-                    echo "<h3> Instagram create container</h3>";
-                    print_r($response);
+                    if(!isset($response->error))
+                    {
 
-                    curl_setopt($ch, CURLOPT_URL,"https://graph.facebook.com/".GRAPH_VERSION."/".$_SESSION['ig_business_account'].'/media_publish?access_token='.$_SESSION['pageToken']);
-                    curl_setopt($ch, CURLOPT_POST, true);
-                    curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query(['creation_id'=>$response->id]));
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    $response = curl_exec($ch);
-                    curl_close($ch);
-                    echo "<h3> Instagram post container</h3>";
-                    print_r($response);
+                        
+                        curl_setopt($ch, CURLOPT_URL,"https://graph.facebook.com/".GRAPH_VERSION."/".$_SESSION['ig_business_account'].'/media_publish?access_token='.$_SESSION['pageToken']);
+                        curl_setopt($ch, CURLOPT_POST, true);
+                        curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query(['creation_id'=>$response->id]));
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        $response = curl_exec($ch);
+                        curl_close($ch);
+                        echo "<h3> Instagram post container</h3>";
+                        print_r($response);
+                    }
 
-                   /*  header('Location: profile.php?message=photo'); */
+                    header('Location: profile.php?message=photo');
                     exit();
                 }
                 else
