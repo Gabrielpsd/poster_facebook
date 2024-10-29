@@ -14,3 +14,11 @@ The tool was designed to be an API that was incorporated to a WebShop system, th
 ## Instagram 
 The first version of the app was build to post and a instagram account that was linked in a enterprise page on facebook, a while later of the creation of the program the Meta implemented a method to do login directly in a Instagram account. 
 That's why there two methods of login in this app.
+
+## Stacks
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)]()
+![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+<center>
+<img align="right" src="http://ForTheBadge.com/images/badges/built-with-love.svg" alt="visitor_badge">
+</center>
